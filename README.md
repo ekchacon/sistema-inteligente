@@ -14,8 +14,8 @@ Figura 2 Arquitecura de agente inteligente con integración multisensorial y apr
 
 <img width="964" alt="image" src="https://github.com/user-attachments/assets/859109b7-b271-4e45-b4f0-a41aa0d91b4c">
 
-El modelo de ambiente y agente propuestos fueron implementados en el lenguaje de programación C++, en el cual también fue simulado la interacción del agente inteligente con su ambiente.
-
 Fig. 3, curva de aprendizaje del agente, en el cual los primeros episodios tiene el mayor número de pasos los cuales estan alrededor de los 170, alcanza la tendencia estable en menos de los 50 episodios.
 
 <img width="781" alt="image" src="https://github.com/user-attachments/assets/4227a20c-0ef4-46f5-9c15-641983dc1ea1">
+
+El modelo de ambiente y agente propuestos fueron implementados en el lenguaje de programación C++, en el cual también fue simulado la interacción del agente inteligente con su ambiente.
