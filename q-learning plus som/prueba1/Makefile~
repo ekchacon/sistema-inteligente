@@ -1,0 +1,15 @@
+qllib_path=../qllib
+
+all: ql
+
+ql: prueba1.o ql.o
+	g++ prueba1.o ql.o -o ql
+
+prueba1.o: prueba1.cpp
+	g++ -c prueba1.cpp
+
+ql.o: $(qllib_path)/ql.cpp
+	g++ -c $(qllib_path)/ql.cpp
+
+clean:
+	rm -rf *o ql

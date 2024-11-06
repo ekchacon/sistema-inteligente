@@ -1,0 +1,32 @@
+
+
+ Version 4.16 (4.16 es el float de intra-options convertido en intra + SOM)
+
+-- paso con varaiacion de distancia de acuerdo a la posicion en el estado anterior para ir al estado sig.
+
+-- Ocurre repetición estadoActual == estadoSig porque los sensores tienen desv std.
+
+-- Se genera una gráfica aquí, tomando en cuenta que cada sonar genera una posicion con una desviación estandar NULO.
+
+
+-- Se modifica el código tal como si se mueve el robot en el mundo real.
+	
+	-- mundo() --> (x,y);
+	-- sensores((x,y)) --> (x,y,sig1), (x,y,sig2), (x,y,sig3).
+	-- SOM((x,y,sig1), (x,y,sig2), (x,y,sig3)) --> estadoActual
+	-- intra-Options(estadoActual) --> options,acción.
+	-- mundo(acción) --> (x,y);
+
+Durante la experimentación se observó(CON SENSORES SIN DESV STD):
+
+	-- Entra en no estados (NO SUCEDE).
+	-- Al dar un paso cae en el mismo estado (NO SUCEDE).
+
+En la versión 4.16 se cambia la forma de generar los numeros rand, ahora se basa en 
+una distribución_normal uniforme(0,1) usando chronos. También fue reparado algunos errores
+relacionados en generar los numeros aleatorios.
+
+Esta es la versión estable 4.16, con este puedo hacer experimentos,
+para tener la parte experimental de mi tesis.
+
+SE CONCLUYE QUE LOS PICOS QUE SE VE EN TODAS LAS GRAFICAS DESDE EXP 1 HASTA EXP 7 NO ESTA EN FUNCION DEL E-GREEDY. ENTONCES A QUE SE DEBE?

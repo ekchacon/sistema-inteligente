@@ -1,0 +1,49 @@
+//Ek Chacón
+#ifndef QLEA_H
+#define QLEA_H
+
+#inlcude <vector>
+
+using namespace std;
+
+class Ambiente
+{
+	private:
+	
+	unsigned short numfilas;
+	unsigned short numcolumnas;
+	short filas;
+	short columnas;
+	
+	public:
+	
+	ambiente(const unsigned short _numRenglones, const unsigned short _numColumnas);
+	unsigned short Estado();
+	void printEstado();
+	void setEstado(unsigned short _estado);
+	void ejecutaAccion(unsigned short _accion);
+	
+	};
+
+class agente
+{
+	private:
+	
+	vector< vector<float> > q;
+	const unsigned short numEstados;
+	const unsigned short numAcciones;
+	const float alfa;
+	const float gamma;
+	const float epsilon;
+	
+	QLearning(const unsigned short _numEstados, const unsigned short _numAcciones, const float _alfa, const float _gamma, const float _epsilon);
+	void printQ() const;
+	float Q(unsigned short _estado, unsigned short _accion) const;
+	void setQ(unsigned short _estado, unsigned short _accion, float _valor);
+	void actualizaQ(unsigned short _estado, unsigned short _accion, float recompensa, unsigned short _estadoSig, unsigned short accionSig);
+	virtual float Recompensa(unsigned short _estado);
+	unsigned short accionMax(unsigned short _estado);
+	unsigned short seleccionaAccionEpsilonGreedy(unsigned short _estado);
+};
+
+#endif

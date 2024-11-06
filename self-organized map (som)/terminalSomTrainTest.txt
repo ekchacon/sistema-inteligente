@@ -1,0 +1,8 @@
+efi: 0 .-0.994083
+efi: 1 .-0.994083
+efi: 2 .-0.994083
+efi: 3 .-0.994083
+efi: 4 .-0.994083
+efi: 5 .-0.994083
+media efi : 0.994083
+edgar@edgar-laptop:~/Escritorio/4to Semestre/Seminario de tesis III/Experimento formal/2 Exp1-5/Exp1/somTrainAndTestExp1/prueba$

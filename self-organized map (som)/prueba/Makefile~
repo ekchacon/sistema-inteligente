@@ -1,0 +1,18 @@
+#Ek Chacón
+
+libadaboost_path = ../libadaboost
+
+all: adaboost
+
+adaboost: prueba.o adaboost.o
+	g++ prueba.o adaboost.o -o adaboost
+
+prueba.o: prueba.cpp
+	g++ -c prueba.cpp
+
+
+adaboost.o: $(libadaboost_path)/adaboost.cpp
+
+		g++ -c $(libadaboost_path)/adaboost.cpp
+clean:
+	rm -rf *o adaboost
